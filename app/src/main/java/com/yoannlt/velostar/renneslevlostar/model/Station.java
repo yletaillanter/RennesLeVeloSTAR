@@ -105,4 +105,19 @@ public class Station {
     public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
+
+    @Override
+    public String toString() {
+        return "Station{" +
+                "nom='" + nom + '\'' +
+                ", etat='" + etat + '\'' +
+                ", lastUpdate=" + lastUpdate +
+                ", nbEmplacements=" + nbEmplacements +
+                ", nbEmplacementDispo=" + nbEmplacementDispo +
+                ", nbVeloDispo=" + nbVeloDispo +
+                ", idStation=" + idStation +
+                ", latitude='" + latitude + '\'' +
+                ", longitude='" + longitude + '\'' +
+                '}';
+    }
 }
