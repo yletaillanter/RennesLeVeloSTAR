@@ -6,12 +6,11 @@ import android.util.TimeUtils;
  * Created by yoannlt on 21/02/2016.
  */
 public class Station {
-    private String nom;
     private String etat;
-    private TimeUtils lastUpdate;
-    private int nbEmplacements;
-    private int nbEmplacementDispo;
-    private int nbVeloDispo;
+    private String nom;
+    private int nombreemplacementsactuels;
+    private int nombreemplacementsdisponibles;
+    private int nombrevelosdisponibles;
     private int idStation;
     private String latitude;
     private String longitude;
@@ -20,16 +19,15 @@ public class Station {
     public Station() {}
 
     // Full constructor
-    public Station(String nom, String etat, TimeUtils lastUpdate, int nbEmplacements, int nbEmplacementDispo, int nbVeloDispo, int idStation, String latitude, String longitude) {
+    public Station(String nom, String etat, TimeUtils lastUpdate, int nbEmplacements, int nbEmplacementDispo, int nbVeloDispo, int idStation /*String latitude, String longitude*/) {
         this.nom = nom;
         this.etat = etat;
-        this.lastUpdate = lastUpdate;
-        this.nbEmplacements = nbEmplacements;
-        this.nbEmplacementDispo = nbEmplacementDispo;
-        this.nbVeloDispo = nbVeloDispo;
+        this.nombreemplacementsactuels = nbEmplacements;
+        this.nombreemplacementsdisponibles = nbEmplacementDispo;
+        this.nombrevelosdisponibles = nbVeloDispo;
         this.idStation = idStation;
-        this.latitude = latitude;
-        this.longitude = longitude;
+        //this.latitude = latitude;
+        //this.longitude = longitude;
     }
 
     // Getters & Setters
@@ -50,36 +48,28 @@ public class Station {
         this.etat = etat;
     }
 
-    public TimeUtils getLastUpdate() {
-        return lastUpdate;
+    public int getNombreemplacementsactuels() {
+        return nombreemplacementsactuels;
     }
 
-    public void setLastUpdate(TimeUtils lastUpdate) {
-        this.lastUpdate = lastUpdate;
+    public void setNombreemplacementsactuels(int nombreemplacementsactuels) {
+        this.nombreemplacementsactuels = nombreemplacementsactuels;
     }
 
-    public int getNbEmplacements() {
-        return nbEmplacements;
+    public int getNombreemplacementsdisponibles() {
+        return nombreemplacementsdisponibles;
     }
 
-    public void setNbEmplacements(int nbEmplacements) {
-        this.nbEmplacements = nbEmplacements;
+    public void setNombreemplacementsdisponibles(int nombreemplacementsdisponibles) {
+        this.nombreemplacementsdisponibles = nombreemplacementsdisponibles;
     }
 
-    public int getNbEmplacementDispo() {
-        return nbEmplacementDispo;
+    public int getNombrevelosdisponibles() {
+        return nombrevelosdisponibles;
     }
 
-    public void setNbEmplacementDispo(int nbEmplacementDispo) {
-        this.nbEmplacementDispo = nbEmplacementDispo;
-    }
-
-    public int getNbVeloDispo() {
-        return nbVeloDispo;
-    }
-
-    public void setNbVeloDispo(int nbVeloDispo) {
-        this.nbVeloDispo = nbVeloDispo;
+    public void setNombrevelosdisponibles(int nombrevelosdisponibles) {
+        this.nombrevelosdisponibles = nombrevelosdisponibles;
     }
 
     public int getIdStation() {
@@ -111,10 +101,9 @@ public class Station {
         return "Station{" +
                 "nom='" + nom + '\'' +
                 ", etat='" + etat + '\'' +
-                ", lastUpdate=" + lastUpdate +
-                ", nbEmplacements=" + nbEmplacements +
-                ", nbEmplacementDispo=" + nbEmplacementDispo +
-                ", nbVeloDispo=" + nbVeloDispo +
+                ", nombreemplacementsactuels=" + nombreemplacementsactuels +
+                ", nombreemplacementsdisponibles=" + nombreemplacementsdisponibles +
+                ", nombrevelosdisponibles=" + nombrevelosdisponibles +
                 ", idStation=" + idStation +
                 ", latitude='" + latitude + '\'' +
                 ", longitude='" + longitude + '\'' +
