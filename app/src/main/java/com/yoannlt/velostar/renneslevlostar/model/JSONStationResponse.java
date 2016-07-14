@@ -1,19 +1,18 @@
 package com.yoannlt.velostar.renneslevlostar.model;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by yoannlt on 21/02/2016.
  */
-public class StationResponse {
+public class JSONStationResponse {
     private int nhits;
-    private Record[] records;
+    private Enregistrement[] records;
 
-    public StationResponse() {
+    public JSONStationResponse() {
     }
 
-    public StationResponse(int nhits, Record[] records) {
+    public JSONStationResponse(int nhits, Enregistrement[] records) {
         this.nhits = nhits;
         this.records = records;
     }
@@ -26,11 +25,11 @@ public class StationResponse {
         this.nhits = nhits;
     }
 
-    public Record[] getRecords() {
+    public Enregistrement[] getRecords() {
         return records;
     }
 
-    public void setRecords(Record[] records) {
+    public void setRecords(Enregistrement[] records) {
         this.records = records;
     }
 

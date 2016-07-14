@@ -3,16 +3,16 @@ package com.yoannlt.velostar.renneslevlostar.model;
 /**
  * Created by yoannlt on 23/02/2016.
  */
-public class Record {
+public class Enregistrement {
     private String datasetid;
     private String recordid;
-    private Fields fields;
+    private Station fields;
     private String record_timestamp;
 
-    public Record() {
+    public Enregistrement() {
     }
 
-    public Record(String datasetid, String recordid, Fields fields, String record_timestamp) {
+    public Enregistrement(String datasetid, String recordid, Station fields, String record_timestamp) {
         this.datasetid = datasetid;
         this.recordid = recordid;
         this.fields = fields;
@@ -35,11 +35,11 @@ public class Record {
         this.recordid = recordid;
     }
 
-    public Fields getFields() {
+    public Station getFields() {
         return fields;
     }
 
-    public void setFields(Fields fields) {
+    public void setFields(Station fields) {
         this.fields = fields;
     }
 

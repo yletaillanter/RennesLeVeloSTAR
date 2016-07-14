@@ -1,43 +1,30 @@
 package com.yoannlt.velostar.renneslevlostar.model;
 
-import android.util.TimeUtils;
-
 /**
- * Created by yoannlt on 21/02/2016.
+ * Created by yoannlt on 23/02/2016.
  */
 public class Station {
     private String etat;
-    private String nom;
-    private int nombreemplacementsactuels;
-    private int nombreemplacementsdisponibles;
+    private String lastupdate;
     private int nombrevelosdisponibles;
-    private int idStation;
-    private String latitude;
-    private String longitude;
+    private int nombreemplacementsactuels;
+    private String nom;
+    private int nombreemplacementsdisponibles;
+    private int idstation;
+    private double[] coordonnees;
 
-    // Empty constructor
-    public Station() {}
+    public Station() {
+    }
 
-    // Full constructor
-    public Station(String nom, String etat, TimeUtils lastUpdate, int nbEmplacements, int nbEmplacementDispo, int nbVeloDispo, int idStation /*String latitude, String longitude*/) {
-        this.nom = nom;
+    public Station(String etat, String lastupdate, int nombrevelosdisponibles, int nombreemplacementsactuels, String nom, int nombreemplacementsdisponibles, int idstation, double[] coordonnees) {
         this.etat = etat;
-        this.nombreemplacementsactuels = nbEmplacements;
-        this.nombreemplacementsdisponibles = nbEmplacementDispo;
-        this.nombrevelosdisponibles = nbVeloDispo;
-        this.idStation = idStation;
-        //this.latitude = latitude;
-        //this.longitude = longitude;
-    }
-
-    // Getters & Setters
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
+        this.lastupdate = lastupdate;
+        this.nombrevelosdisponibles = nombrevelosdisponibles;
+        this.nombreemplacementsactuels = nombreemplacementsactuels;
         this.nom = nom;
+        this.nombreemplacementsdisponibles = nombreemplacementsdisponibles;
+        this.idstation = idstation;
+        this.coordonnees = coordonnees;
     }
 
     public String getEtat() {
@@ -48,20 +35,12 @@ public class Station {
         this.etat = etat;
     }
 
-    public int getNombreemplacementsactuels() {
-        return nombreemplacementsactuels;
+    public String getLastupdate() {
+        return lastupdate;
     }
 
-    public void setNombreemplacementsactuels(int nombreemplacementsactuels) {
-        this.nombreemplacementsactuels = nombreemplacementsactuels;
-    }
-
-    public int getNombreemplacementsdisponibles() {
-        return nombreemplacementsdisponibles;
-    }
-
-    public void setNombreemplacementsdisponibles(int nombreemplacementsdisponibles) {
-        this.nombreemplacementsdisponibles = nombreemplacementsdisponibles;
+    public void setLastupdate(String lastupdate) {
+        this.lastupdate = lastupdate;
     }
 
     public int getNombrevelosdisponibles() {
@@ -72,41 +51,56 @@ public class Station {
         this.nombrevelosdisponibles = nombrevelosdisponibles;
     }
 
-    public int getIdStation() {
-        return idStation;
+    public int getNombreemplacementsactuels() {
+        return nombreemplacementsactuels;
     }
 
-    public void setIdStation(int idStation) {
-        this.idStation = idStation;
+    public void setNombreemplacementsactuels(int nombreemplacementsactuels) {
+        this.nombreemplacementsactuels = nombreemplacementsactuels;
     }
 
-    public String getLatitude() {
-        return latitude;
+    public String getNom() {
+        return nom;
     }
 
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public String getLongitude() {
-        return longitude;
+    public int getNombreemplacementsdisponibles() {
+        return nombreemplacementsdisponibles;
     }
 
-    public void setLongitude(String longitude) {
-        this.longitude = longitude;
+    public void setNombreemplacementsdisponibles(int nombreemplacementsdisponibles) {
+        this.nombreemplacementsdisponibles = nombreemplacementsdisponibles;
+    }
+
+    public int getIdstation() {
+        return idstation;
+    }
+
+    public void setIdstation(int idstation) {
+        this.idstation = idstation;
+    }
+
+    public double[] getCoordonnees() {
+        return coordonnees;
+    }
+
+    public void setCoordonnees(double[] coordonnees) {
+        this.coordonnees = coordonnees;
     }
 
     @Override
     public String toString() {
-        return "Station{" +
-                "nom='" + nom + '\'' +
-                ", etat='" + etat + '\'' +
-                ", nombreemplacementsactuels=" + nombreemplacementsactuels +
-                ", nombreemplacementsdisponibles=" + nombreemplacementsdisponibles +
+        return "Fields{" +
+                "etat='" + etat + '\'' +
+                ", lastupdate='" + lastupdate + '\'' +
                 ", nombrevelosdisponibles=" + nombrevelosdisponibles +
-                ", idStation=" + idStation +
-                ", latitude='" + latitude + '\'' +
-                ", longitude='" + longitude + '\'' +
+                ", nombreemplacementsactuels=" + nombreemplacementsactuels +
+                ", nom='" + nom + '\'' +
+                ", nombreemplacementsdisponibles=" + nombreemplacementsdisponibles +
+                ", idstation=" + idstation +
                 '}';
     }
 }
