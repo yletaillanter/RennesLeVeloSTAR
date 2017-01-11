@@ -3,7 +3,7 @@
 Affiche la disponibilité des Vélos STAR à Rennes et la distance des stations
 
 API : 
-* https://data.keolis-rennes.com/
+* https://data.rennesmetropole.fr/explore/dataset/etat-des-stations-le-velo-star-en-temps-reel/
 
 Lib :
 * [RxAndroid](https://github.com/ReactiveX/RxAndroid)
